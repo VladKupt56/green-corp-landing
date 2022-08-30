@@ -4,10 +4,14 @@ body {
   }
    
   header {
+    background-color: #fff;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
   }
 
   .header__logo {
@@ -43,11 +47,6 @@ body {
 
   .about__image {
     width: 500px;
-  }
-   
-  .about__sun-image {
-    width: 100px;
-    height: 100px;
   }
 
   .about {
@@ -173,3 +172,131 @@ body {
   .footer__links a {
     margin-bottom: 15px;
   }
+     
+  .about__sun-image {
+    position:absolute;
+    width: 100px;
+    height: 100px;
+    animation-name: rotation;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes rotation {
+    0% {
+        transform: rotate(0);
+    }
+  
+    100% {
+        transform: rotate(360deg);
+    }
+ }
+ @media (max-width: 1024px) {
+  .header__logo {height: 20px;
+  }
+  about {
+    padding: 115px 20px;
+  }
+  .about h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .about__image {
+    width: 280px;
+  }
+  .about__sun-image {
+    width: 75px;
+    height: 75px;
+  }
+ }
+ @media (max-width: 720px) {
+  /* header {
+    padding: 10px;
+}
+
+.header__logo {
+    height: 20px;
+}
+
+header a {
+    margin-right: 10px;
+}
+
+.about {
+    flex-direction: column-reverse;
+    padding: 50px 10px;
+}
+
+.about h1 {
+    font-size: 36px;
+    line-height: 40px;
+}
+
+.about__image {
+    width: 280px;
+}
+
+.about__sun-image {
+    width: 75px;
+    height: 75px;
+}
+
+.form {
+    padding: 50px 10px;
+}
+
+.form h1 {
+    font-size: 36px;
+}
+
+footer {
+    padding: 50px 10px;
+}
+
+.footer__container {
+    flex-direction: column;
+} */
+  header {
+    padding: 10px;
+  }
+  .header__logo {
+    height: 20px;
+  }
+  section head header{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .about__image {
+    width: 280px;
+  }
+  .about__sun-image {
+    width: 75px;
+    height: 75px;
+  }
+  .about {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 50px 10px;
+  } 
+  .footer__container {
+    flex-direction: column;
+  }
+  footer {
+    padding: 50px 10px;
+}
+footer a {
+  padding: 10px;
+}
+.form {
+  padding: 50px 10px;
+}
+}
